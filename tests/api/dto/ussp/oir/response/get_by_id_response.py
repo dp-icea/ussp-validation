@@ -1,7 +1,6 @@
-from dataclasses import dataclass
 from api.dto.ussp.oir.response.operational_intent import OperationalIntentDto
+from pydantic import BaseModel
 
 
-@dataclass
-class GetOirByIdDto:
+class GetOirByIdDto(BaseModel):
     operational_intent: OperationalIntentDto

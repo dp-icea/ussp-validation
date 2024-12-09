@@ -1,7 +1,6 @@
-from dataclasses import dataclass
+from pydantic import BaseModel
 
 
-@dataclass
-class PolygonVerticesDto:
+class PolygonVerticesDto(BaseModel):
     lng: int
     lat: int

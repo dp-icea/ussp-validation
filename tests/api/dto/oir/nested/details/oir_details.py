@@ -1,9 +1,10 @@
-from dataclasses import dataclass
 from api.dto.volumes.volume_4d import Volume4dDto
 
+from pydantic import BaseModel
+from typing import Optional
 
-@dataclass
-class OirDetailsDto:
-    volumes: Volume4dDto | None
-    off_nominal_volumes: Volume4dDto | None
-    priority: int | None
+
+class OirDetailsDto(BaseModel):
+    volumes: Optional[Volume4dDto] = None
+    off_nominal_volumes: Optional[Volume4dDto] = None
+    priority: Optional[int] = None

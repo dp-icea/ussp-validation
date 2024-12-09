@@ -1,9 +1,8 @@
-from api.dto.oir.nested.time import TimeValueDto
-from dataclasses import dataclass
+from pydantic import BaseModel
+from api.dto.oir.nested.time.time import TimeValueDto
 
 
-@dataclass
-class OirReferenceDto:
+class OirReferenceDto(BaseModel):
     id: str
     flight_type: str
     manager: str

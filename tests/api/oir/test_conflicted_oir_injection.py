@@ -1,6 +1,6 @@
-from api.constants.auth import CONSTRAINT_MANAGEMENT_SCOPE_VALUE
+from . import CONSTRAINT_MANAGEMENT_SCOPE_VALUE
 from . import UsspClient, DssClient
-from . import OirMocks as OIR_MOCKS
+from . import OIR_MOCKS
 from . import is_client_response_not_found, is_client_response_conflict
 
 

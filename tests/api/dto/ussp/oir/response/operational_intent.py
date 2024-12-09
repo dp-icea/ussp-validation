@@ -1,7 +1,6 @@
-from dataclasses import dataclass
 from api.dto.oir.nested.reference.reference import OirReferenceDto
+from pydantic import BaseModel
 
 
-@dataclass
-class OperationalIntentDto:
+class OperationalIntentDto(BaseModel):
     reference: OirReferenceDto

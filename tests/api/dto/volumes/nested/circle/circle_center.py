@@ -1,7 +1,6 @@
-from dataclasses import dataclass
+from pydantic import BaseModel
 
 
-@dataclass
-class CircleCenterDto:
+class CircleCenterDto(BaseModel):
     value: int
     units: str

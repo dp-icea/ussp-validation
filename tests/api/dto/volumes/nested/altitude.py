@@ -1,8 +1,7 @@
-from dataclasses import dataclass
+from pydantic import BaseModel
 
 
-@dataclass
-class AltitudeDto:
+class AltitudeDto(BaseModel):
     value: int
     reference: str
     units: str

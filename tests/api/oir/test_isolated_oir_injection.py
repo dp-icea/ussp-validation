@@ -1,6 +1,7 @@
-from api.constants.auth import CONSTRAINT_MANAGEMENT_SCOPE_VALUE
+from . import is_ussp_get_oir_response_compliant
+from . import CONSTRAINT_MANAGEMENT_SCOPE_VALUE
 from . import UsspClient, DssClient
-from . import OirMocks as OIR_MOCKS
+from . import OIR_MOCKS
 from . import is_client_response_successful
 
 
@@ -37,6 +38,8 @@ class TestClassIsolatedOirInjection:
         ussp_oir_response = ussp_client.get_oir_by_id(OIR_MOCKS.OIR_ID)
 
         assert is_client_response_successful(ussp_oir_response)
+
+        assert is_ussp_get_oir_response_compliant(ussp_oir_response)
 
         assert self.__is_oir_object_a_match(
             dss_oir_response.json(),

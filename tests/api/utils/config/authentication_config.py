@@ -23,7 +23,7 @@ class AuthenticationHeaderBuilder:
             else self.__build_valid_token_request_query_parameters(scope, client_type)
         )
 
-    def __build_mocked_token_request_query_parameters(self) -> str:
+    def __build_mocked_token_request_query_parameters(self) -> dict:
         return AuthenticationMocks.INVALID_TOKEN_REQUEST_PARAMETER_STR
 
     def __build_token_audience(self, client_type: str) -> str:
@@ -31,15 +31,14 @@ class AuthenticationHeaderBuilder:
 
     def __build_valid_token_request_query_parameters(
         self, scope: str, client_type: str
-    ) -> str:
-        return (
-            QUERY_PARAM_SCOPE_NAME
-            + scope
-            + QUERY_PARAM_INTENDED_AUDIENCE_NAME
-            + self.__build_token_audience(client_type)
-            + QUERY_PARAM_API_KEY_NAME
-            + environ.get("DSS_API_KEY"),
-        )
+    ) -> dict:
+        return {
+            QUERY_PARAM_SCOPE_NAME: scope,
+            QUERY_PARAM_INTENDED_AUDIENCE_NAME: self.__build_token_audience(
+                client_type
+            ),
+            QUERY_PARAM_API_KEY_NAME: environ.get("DSS_API_KEY"),
+        }
 
     def get_request_bearer_token_parameters(self) -> str:
         return self.bearer_token_req_params
