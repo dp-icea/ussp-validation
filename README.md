@@ -13,9 +13,9 @@ Compliance with the following standards and regulations:
 
 Test cases are documented in the BR-UTM wiki.
 
-- [BR-UTM Wiki](<https://servicos2.decea.mil.br/br-utm/wiki/books/documentacao-tecnica/page/tp-strategic-deconfliction>)
+- [BR-UTM Wiki](https://servicos2.decea.mil.br/br-utm/wiki/books/documentacao-tecnica/page/tp-strategic-deconfliction)
 
 ## Development Practices
 
-- [Contributing](./CONTRIBUTING.md)
-- [Style Guide](./STYLEGUIDE.md)
+- [Contributing](./docs/CONTRIBUTING.md)
+- [Style Guide](./docs/STYLEGUIDE.md)
