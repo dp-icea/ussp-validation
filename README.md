@@ -6,8 +6,8 @@ This repository contains BR-UTM's implementation of a validation tool for UAS Se
 
 Compliance with the following standards and regulations:
 
-- [ASTM F3411-22](https://www.astm.org/f3411-22.html): Remote ID;
-- [ASTM F3548-21](https://www.astm.org/f3548-21.html): UAS Traffic Management (UTM), UAS Service Supplier (USS) and Interoperability Specification.
+- ``WIP`` [ASTM F3411-22](https://www.astm.org/f3411-22.html): Remote ID;
+- ``DONE`` [ASTM F3548-21](https://www.astm.org/f3548-21.html): UAS Traffic Management (UTM), UAS Service Supplier (USS) and Interoperability Specification.
 
 ## Test plan documentation
 
@@ -19,3 +19,17 @@ Test cases are documented in the BR-UTM wiki.
 
 - [Contributing](./CONTRIBUTING.md)
 - [Style Guide](./STYLEGUIDE.md)
+
+## Getting started
+
+Follow these steps to set up and run the tests.
+
+### Environment Variables
+
+This application relies on environment variables for configuration. You'll need to create a .env file in the root directory of this project (if one doesn't already exist) and populate it with the necessary variables. Please use the example.env in the root folder as a template.
+
+### Build and run the docker image
+
+```
+make run
+```
