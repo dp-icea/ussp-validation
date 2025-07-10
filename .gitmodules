@@ -1,0 +1,4 @@
+[submodule "geojson-utm-scenarios"]
+	path = geojson-utm-scenarios
+	url = https://github.com/dp-icea/geojson-utm-scenarios
+	branch = sbr497-references
